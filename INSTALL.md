@@ -1,19 +1,31 @@
-### [Foobar](https://foobar.com)
+### [Neiki's Page Editor](https://github.com/neikiri/neiki-page-editor)
 
-#### Install using Git
+#### Install
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
+Dracula ships as a built-in theme starting with `neiki-page-editor@0.4.0` — no separate package or CSS file needed.
 
 ```bash
-git clone https://github.com/dracula/foobar.git
+npm install neiki-page-editor
 ```
-
-#### Install manually
-
-Download using the [GitHub `.zip` download](https://github.com/dracula/foobar/archive/main.zip) option and unzip them.
 
 #### Activating theme
 
-1. Do this;
-2. Then that;
+1. Pass `theme: 'dracula'` when creating the editor.
+
+```js
+import NeikiPageEditor from 'neiki-page-editor';
+
+const editor = new NeikiPageEditor('#editor', {
+  theme: 'dracula'
+});
+```
+
+2. Or switch to it at runtime.
+
+```js
+editor.setTheme('dracula');
+```
+
 3. Boom! It's working ✨
+
+You can also cycle through all built-in themes (including Dracula) with `editor.toggleTheme()`, or read the current theme with `editor.getTheme()`. See the [Themes section](https://github.com/neikiri/neiki-page-editor#themes) of the main README for the full theme API.
