@@ -4,7 +4,7 @@ The Dracula Theme ships with Neiki's Page Editor 0.4.0 and later — no separate
 
 #### Install using Git
 
-If you are a Git user, you can clone the repo and keep it up to date:
+If you use Git, clone the repository and keep it up to date:
 
 ```bash
 git clone https://github.com/dracula/neiki-page-editor.git
@@ -12,12 +12,15 @@ git clone https://github.com/dracula/neiki-page-editor.git
 
 #### Install manually
 
-Download using the [GitHub `.zip` download](https://github.com/dracula/neiki-page-editor/archive/main.zip) option and unzip it.
+Download the [GitHub `.zip` archive](https://github.com/dracula/neiki-page-editor/archive/main.zip) and unzip it.
 
-#### Activating theme
+#### Activating the theme
 
-1. Make sure you're using Neiki's Page Editor 0.4.0 or later, which ships with the Dracula theme built in.
-2. Pass `theme: 'dracula'` when creating the editor, open the toolbar's **More** menu and use **Change Theme** to cycle to **Dracula**, or switch to it at runtime with `editor.setTheme('dracula')`.
+1. Make sure you are using Neiki's Page Editor 0.4.0 or later, which includes the Dracula theme.
+2. Enable Dracula in one of these ways:
+   - Pass `theme: 'dracula'` when creating the editor
+   - Open the toolbar's **More** menu and use **Change Theme** to cycle to **Dracula**
+   - Switch at runtime with `editor.setTheme('dracula')`
 
 ```js
 const editor = new NeikiPageEditor("#editor", {
@@ -25,6 +28,6 @@ const editor = new NeikiPageEditor("#editor", {
 });
 ```
 
-> **Note:** the selected theme is remembered globally in `localStorage` only when you enable `persistTheme: true`. If a user previously picked a different theme, that saved choice takes precedence over the `theme` option on subsequent loads — the config value only applies as the initial default.
+> **Note:** The selected theme is stored globally in `localStorage` only when `persistTheme: true` is enabled. If a user previously chose a different theme, that saved choice overrides the `theme` option on later loads — the config value is only the initial default.
 
 3. Boom! It's working ✨
